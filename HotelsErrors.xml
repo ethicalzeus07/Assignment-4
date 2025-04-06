@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotel> <!-- (1) Wrong root element (should be <Hotels>) -->
+  <!-- (2) Missing the _Rating attribute on the first hotel -->
+  <Hotel>
+    <Name>Westin</Name>
+    <Phone>480-968-8885</Phone>
+    <Phone>800-937-8461</Phone>
+    <Address _NearestAirport="Sky Habor">
+      <Number>11</Number>
+      <Street>E 7th St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <Hotel _Rating="4.5">
+    <Name>Hilton Garden Inn</Name>
+    <Phone>480-123-4567</Phone>
+    <Address _NearestAirport="Phoenix Airport">
+      <Number>123</Number>
+      <Street>University Dr</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (3) Missing a Phone element -->
+  <Hotel _Rating="4.0">
+    <Name>Marriott</Name>
+    <Address>
+      <Number>456</Number>
+      <Street>Mill Ave</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+
+  <!-- (4) Missing closing tag for <Address> -->
+  <Hotel _Rating="3.8">
+    <Name>Hyatt</Name>
+    <Phone>480-555-1212</Phone>
+    <Address _NearestAirport="Sky Habor">
+      <Number>789</Number>
+      <Street>Broadway Rd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85282</Zip>
+    <!-- NO closing </Address> -->
+  </Hotel>
+
+  <!-- (5) Two <Name> elements -->
+  <Hotel _Rating="4.0">
+    <Name>Residence Inn</Name>
+    <Name>Residence Inn Duplicate</Name>
+    <Phone>480-111-2222</Phone>
+    <Address _NearestAirport="Phoenix Airport">
+      <Number>101</Number>
+      <Street>Apache Blvd</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+    </Address>
+  </Hotel>
+</Hotel>
